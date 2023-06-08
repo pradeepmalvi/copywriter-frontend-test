@@ -49,8 +49,12 @@ export default function Header() {
         <div className='hidden lg:flex lg:gap-x-12'>
           <nav>
             <ul className='flex items-center justify-between space-x-4'>
-              {links.map(({ href, label }) => (
-                <UnstyledLink href={href} className='px-10 text-sm text-white'>
+              {links.map(({ href, label }, key) => (
+                <UnstyledLink
+                  key={key}
+                  href={href}
+                  className='px-10 text-sm text-white'
+                >
                   {label}
                 </UnstyledLink>
               ))}
